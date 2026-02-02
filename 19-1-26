@@ -1,0 +1,135 @@
+#Code 1 - creating method 
+public class Student {
+
+    void study() {
+        System.out.println("Student is studying");
+    }
+
+    void sleep() {
+        System.out.println("Student is sleeping");
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.study();
+        s1.sleep();
+    }
+}
+
+#code 2 reference 
+public class Student{
+int marks = 80;
+
+
+public static void main(String[] args){
+    Student s1 = new Student();
+    System.out.println(s1.marks);
+    
+
+}
+}
+
+
+
+#code 3
+// Dereference 
+public class Student{
+int marks = 80;
+
+
+public static void main(String[] args){
+    Student s1 = new Student();
+    Student s2 = s1; // same reference
+    s2 = null; // derefrencing 
+    System.out.println(s2.marks);
+    
+    
+
+}
+}
+
+#code 4 
+//multiple reference  reference 
+public class Student{
+int marks = 80;
+
+
+public static void main(String[] args){
+    Student s1 = new Student();
+    Student s2 = s1; // same reference 
+    System.out.println(s2.marks);
+    
+    
+
+}
+}
+#code 5
+class Students {
+    int marks = 80;
+
+    static void updateMarks(Students s) {
+        s.marks += 2;
+    }
+
+    public static void main(String[] args) {
+        Students s1 = new Students();
+        updateMarks(s1);
+        System.out.println(s1.marks);
+    }
+}
+#code6
+import java.util.*;
+
+class Students {
+    int id;
+
+    Students(int id) {
+        this.id = id;
+    }
+
+    public static void main(String[] args) {
+
+        List<Students> students = new ArrayList<>();
+        students.add(new Students(101));
+        students.add(new Students(102));
+
+        for (Students s : students) {
+            System.out.println(s.id);
+        }
+    }
+}
+
+#code 7 
+
+Code 7
+Dictionaries of Objects 
+// Dictionaries of Objects 
+import java.util.*;
+class Student {
+    int id;
+    
+    Student(int id) {
+        this.id = id;
+    }
+}
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    // syntax of ArrayList
+	    // List <datatype> list_name = new ArrayList<>();
+		Map<Integer, Student> map = new HashMap<>();
+		
+	    map.put(1, new Student(101));	
+		map.put(2, new Student(102));
+		
+		System.out.println(map.get(1).id);
+		System.out.println(map.get(3).id);
+		
+	}
+}
+Output :
+101
+Exception in thread "main" java.lang.NullPointerException: Cannot read field "id" because the return value of "java.util.Map.get(Object)" is null
+        at Main.main(Main.java:23)
