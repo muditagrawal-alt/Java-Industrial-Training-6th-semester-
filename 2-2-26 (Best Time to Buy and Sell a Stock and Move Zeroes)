@@ -1,4 +1,4 @@
-Q1-Best Time to Buy and Sell a Stock
+LeetCode-Q-Best Time to Buy and Sell a Stock
 
 class Solution {
     public int maxProfit(int[] prices) {
@@ -15,7 +15,7 @@ class Solution {
 }
 
 
-Q2-Move Zeroes
+LeetCode-Q-Move Zeroes
 
 class Solution {
     public void moveZeroes(int[] nums) {
