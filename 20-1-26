@@ -1,0 +1,65 @@
+//Encapsulation wrapping the data(method , class, variable)
+//into a single unit called class and restriction of the data using the access modifires 
+
+//public , private , protected 
+// need for encapsulation 
+
+//-- security
+//-- maintianability
+//--validation before changing the data
+//-- controll access
+#code1
+public class BankAccount{
+    int bankBalance;
+    // setters
+    public void setBalance(int amount){
+        if(amount>=0){
+             bankBalance=amount;
+        }else{
+            System.out.println("invalid amount");
+
+        }
+        
+        }
+        // getters
+         public int getBalance(){
+            return bankBalance;
+    }
+    public static void main(String[] args) {
+        BankAccount acc = new BankAccount();
+        acc.setBalance(5000);
+        System.out.println(acc.getBalance());
+    }
+}
+
+// Abstraction 
+// Abstraction means hididng the implimentation and showing only essential part
+//Abstract class -- class can't be initialized and it is formed
+// using abstract keyword
+// abstract method -- no body only the implimentation is there
+
+#code 2
+public abstract class Vehical {
+    abstract void start();
+    public static void main(String[] args) {
+    Vehical v1 = new Car();
+    Vehical v2 = new Bike();
+    v1.start();
+    v2.start();
+        
+    }
+ 
+}
+class Car extends Vehical{
+    void start(){
+        System.err.println("Car Start");
+    }
+}
+class Bike extends Vehical{
+    void start(){
+        System.err.println("Bike Start");
+    }
+ 
+
+}
+   
