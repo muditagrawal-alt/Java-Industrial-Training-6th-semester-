@@ -1,0 +1,117 @@
+// interface 
+// an interface in a java is an abstarct type that drfines a ste of
+// methods a class must implements 
+// multiple inheritance usng interface
+#code1
+interface tv{
+    void watchingTv();
+}
+interface food{
+    void eatingfood();
+}
+class Student implements tv,food{
+     public void watchingTv(){
+         System.out.println("watching Tv");
+     } 
+      public void eatingfood(){
+         System.out.println("eating Food");
+    
+}
+}
+
+class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.watchingTv();
+        s.eatingfood();
+       // System.out.println("Try programiz.pro");
+    }
+}
+
+#code 2
+// inheritjng constructor 
+class Person{
+    Person(String name ){
+        System.out.println("Person name " + name);
+    }
+}
+class collegeStudent extends Person {
+    collegeStudent(String name){
+        super(name); // parent class constructor called 
+          System.out.println("college Student constructor called"); // child classs constructor called 
+        
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        collegeStudent c = new collegeStudent("Nikhil");
+        
+        
+      
+    }
+}
+
+#code 3
+// Inheriting attributes 
+class University{
+      String universityName = " IILM University";
+} 
+class College extends University{
+    void displayUniversityName(){
+        System.out.println("University: " +  universityName);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        College c = new College();
+        c.displayUniversityName();
+        //System.out.println("Try programiz.pro");
+    }
+}
+
+#Code 4:
+// Inheriting methods 
+
+class Parent {
+    void pockeyMoney() {
+        System.out.println("Pockey Money credit");
+    }
+}
+class child extends Parent{
+    void freelancing() {
+        System.out.println("Kudh ka paisa");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		child ch = new child();
+		ch.pockeyMoney();
+		ch.freelancing();
+	}
+}
+
+#code5
+// method overriding
+class CollegeStudent{
+    void task(){
+        System.out.println("Eating Food");
+    }
+}
+class Student extends CollegeStudent{
+   // @overriding
+    void task(){
+        System.out.println("Drinking water");
+        
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        CollegeStudent obj = new Student();
+        obj.task();
+       // System.out.println("Try programiz.pro");
+    }
+}
