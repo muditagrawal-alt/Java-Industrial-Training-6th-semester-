@@ -1,0 +1,58 @@
+Code -1
+class Student{
+    //logic
+    int rollNumber;
+    String name;
+}
+
+public class basic{
+
+    public static void main(String[] args) {
+        Student obj = new Student();
+        obj.rollNumber = 1;
+        obj.name = "Parshant";
+        System.out.println(obj.rollNumber);
+        System.out.println(obj.name);
+    }
+}
+
+
+Code -2
+class student {
+    int rollNumber;
+    String name;
+
+student(int i, String n){
+    rollNumber = i;
+    name = n;
+}
+
+    
+}
+
+public class Main {
+    public static void main(String[] args) {
+        student obj = new student(1,"Nikhil");
+        obj.rollNumber = 1;
+        obj.name = "Nikhil";
+
+        System.out.println(obj.rollNumber);
+        System.out.println(obj.name);
+    }
+}
+
+code-3
+class Student {
+    int rollNumber;
+    void setId(int rollNumber){
+        this.rollNumber = rollNumber;
+    }
+}
+public class basic {
+    public static void main(String[] args) {
+        Student obj = new Student();
+        obj.setId(1751);
+        System.out.println(obj.rollNumber);
+
+    }
+}
