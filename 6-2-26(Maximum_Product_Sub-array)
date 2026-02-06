@@ -1,0 +1,16 @@
+Q - LeetCode (152, Maximum Product Sub-array)
+
+class Solution {
+    public int maxProduct(int[] nums) {
+        int maxProduct = Integer.MIN_VALUE;
+
+        for(int i = 0; i < nums.length; i++){
+            int currentProduct = 1;
+            for(int j = i; j < nums.length; j++){
+                currentProduct = currentProduct * nums[j];
+                maxProduct = Math.max(maxProduct, currentProduct);
+            }
+        }
+            return maxProduct;
+    }
+}
