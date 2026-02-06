@@ -14,3 +14,6 @@ class Solution {
             return maxProduct;
     }
 }
+
+//TC: O(n^2)
+//SC: O(1)
