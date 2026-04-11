@@ -1,4 +1,4 @@
-Q - LeetCode (144, Bonary Tree Preorder Traversal)
+Q - LeetCode (144, Binary Tree Preorder Traversal)
 
 /**
  * Definition for a binary tree node.
@@ -113,7 +113,7 @@ class Solution {
     }
 }
 
-Q - LeetCode (104, Maximum of Binary Tree)
+Q - LeetCode (104, Maximum Depth of Binary Tree)
 
 /**
  * Definition for a binary tree node.
